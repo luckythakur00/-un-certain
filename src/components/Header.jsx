@@ -28,12 +28,12 @@ const Header = () => {
         <header className={`w-full fixed top-0 left-0 z-50 transition-all bg-white duration-300 ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
             <nav className="container mx-auto  flex justify-between px-8 items-center">
                 <a href="#home">
-                    <img src={logo} alt="Uncertain Logo" className="h-12 w-auto transition-all duration-300" />
+                    <img src={logo} alt="Uncertain Logo" className="h-9 w-40 md:h-12 md:w-auto transition-all duration-300" />
                 </a>
                 <div className="hidden lg:flex items-center space-x-8">
                     {
                         navLinks.map((link) => (
-                            <a key={link.title} href={link.href} className="font-medium text-gray-600 hover:text-red-700 relative transition-colors duration-300 after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-red-700 after:transition-all after:duration-300 hover:after:w-full">{link.title}</a>
+                            <a key={link.title} href={link.href} className="font-medium text-gray-600 hover:text-[#8B0000] relative transition-colors duration-300 after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-[#8B0000] after:transition-all after:duration-300 hover:after:w-full">{link.title}</a>
                         ))
                     }
                 </div>

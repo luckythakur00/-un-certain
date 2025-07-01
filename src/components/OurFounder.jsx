@@ -18,11 +18,12 @@ function OurFounder() {
                 <div className='w-full flex flex-wrap justify-center items-stretch gap-8 p-4'>
                     {
                         founderDetails.map((val, index) => (
-                            <div key={index} className='flex flex-col w-full max-w-sm rounded-lg shadow-lg overflow-hidden'>
+                            <div key={index} className='flex flex-col w-full max-w-sm rounded-lg shadow-lg shadow-black/40 overflow-hidden'>
                                 <div>
                                     <img src={val.Image} alt={val.name} className='h-96 w-full object-cover' />
                                 </div>
-                                <div className="flex-1 flex flex-col p-6 text-white" style={{ backgroundImage: `url(${founderBgImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                                {/* <div className="flex-1 flex flex-col p-6 text-white" style={{ backgroundImage: `url(${founderBgImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}> */}
+                                <div className="flex-1 flex flex-col p-6 bg-white text-black">
                                     <h1>Co-founder and Mentor</h1>
                                     <h2 className='text-2xl font-bold py-2'>{val.name}</h2>
                                     <p className='mt-4 font-normal text-base'>{val.description}</p>
@@ -32,9 +33,8 @@ function OurFounder() {
                     }
                 </div>
             </div>
-            <div className='h-24 bg-red-700 pt-10' ></div>
+            <div className='h-24 bg-[#8B0000] pt-10' ></div>
         </div>
-
     )
 }
 

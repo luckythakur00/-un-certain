@@ -17,7 +17,7 @@ function MeetUncertain() {
     return (
         <div className='h-full'>
             <div id='meetuncertain' className="min-h-screen w-full flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${ImageBG})` }}>
-                <h1 className='pb-2 bg-white text-black text-4xl md:text-6xl mb-8 lg:mb-0'>Meet <span className='text-red-800'>(un)</span>certain</h1>
+                <h1 className='pb-2 bg-white text-black text-4xl md:text-6xl mb-8 lg:mb-0'>Meet <span className='text-[#DA2828] font-semibold'>(un)</span><span className='font-semibold' >certain</span></h1>
                 <div className='w-full lg:w-[50%] text-xl md:text-2xl space-y-8' >
                     <h1>We are <span className='bg-black italic'>not</span> another career counseling company.</h1>
                     <h2>We are a mentorship-focused community that helps students figure things out—academically, emotionally, and personally.</h2>
@@ -35,7 +35,7 @@ function MeetUncertain() {
                     <h1 className='text-black/90 text-4xl md:text-6xl'>Our Approach</h1>
                 </div>
                 <div className='w-full lg:w-[50%] text-lg md:text-xl space-y-8' >
-                    <h1>At <span className='text-red-700'>(un)</span>certain, we know students do not just need advice — they need someone who gets it. Someone who listens, keeps them accountable, and actually shows up.</h1>
+                    <h1>At <span className='text-[#8B0000] font-semibold'>(un)</span><span className='font-semibold' >certain</span>, we know students do not just need advice — they need someone who gets it. Someone who listens, keeps them accountable, and actually shows up.</h1>
                     <h2>That is why we implemented the <span>Buddy System.</span></h2>
                     <p>Each student is paired with a dedicated buddy — a relatable mentor who understands their world, speaks their language, and helps them navigate academics, tough decisions, emotional stress, and everything in between.</p>
                     <p>It is simple:</p>
@@ -47,9 +47,9 @@ function MeetUncertain() {
                 <div className="w-full max-w-6xl bg-white text-black p-6 sm:p-10 rounded-lg shadow-2xl">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black/80 text-center mb-8">How are we different from traditional counselling?</h2>
                     <div className="overflow-x-auto">
-                        <table className="w-full min-w-[700px] text-left border-collapse"> {/* min-w ensures table doesn't get squished */}
+                        <table className="w-full min-w-[700px] text-left border-collapse">
                             <thead>
-                                <tr className="bg-red-800 text-white">
+                                <tr className="bg-[#8B0000] text-white">
                                     <th className="p-4 text-lg font-semibold">What you get</th>
                                     <th className="p-4 text-lg font-semibold text-center">Buddy System</th>
                                     <th className="p-4 text-lg font-semibold text-center">Traditional Counselling</th>

@@ -13,8 +13,8 @@ const Contact = () => {
 
         <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row overflow-hidden">
           {/* Left Side: Contact Information */}
-          <div className="w-full lg:w-2/5 bg-red-700 text-white p-8 md:p-12 relative">
-            <div className="absolute top-0 left-0 w-48 h-48 bg-red-700/50 rounded-full -mt-20 -ml-20"></div>
+          <div className="w-full lg:w-2/5 bg-[#8B0000] text-white p-8 md:p-12 relative">
+            {/* <div className="absolute top-0 left-0 w-48 h-48 bg-red-700/50 rounded-full -mt-20 -ml-20"></div> */}
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-700/50 rounded-full -mb-16 -mr-12"></div>
 
             <h2 className="text-3xl font-bold mb-2">Contact Information</h2>
@@ -72,7 +72,7 @@ const Contact = () => {
               </div>
 
               <div className="text-right">
-                <button type="submit" className="bg-red-600 text-white cursor-pointer font-bold py-3 px-8 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center ml-auto">Send Message<FiSend className="ml-3" /></button>
+                <button type="submit" className="bg-[#8B0000] text-white cursor-pointer font-bold py-3 px-8 rounded-lg hover:bg-[#730000] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center ml-auto">Send Message<FiSend className="ml-3" /></button>
               </div>
             </form>
           </div>
