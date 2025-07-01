@@ -25,8 +25,8 @@ const Header = () => {
     ];
 
     return (
-        <header className={`w-full fixed top-0 left-0 z-50 bg-white transition-all duration-300 ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
-            <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <header className={`w-full fixed top-0 left-0 z-50 transition-all bg-white duration-300 ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
+            <nav className="container mx-auto  flex justify-between px-8 items-center">
                 <a href="#home">
                     <img src={logo} alt="Uncertain Logo" className="h-12 w-auto transition-all duration-300" />
                 </a>
@@ -43,7 +43,7 @@ const Header = () => {
                 </div>
             </nav>
 
-            <div className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out transform ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+            <div className={`lg:hidden block absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out transform ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
                 <div className="px-6 pt-4 pb-6 flex flex-col space-y-2">
                     {
                         navLinks.map((link) => (

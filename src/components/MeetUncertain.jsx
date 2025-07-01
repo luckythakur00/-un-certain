@@ -1,5 +1,6 @@
 import Image from '../assets/Image3.jpeg';
 import Image2 from '../assets/Image7.jpeg';
+import ImageBG from '../assets/Image8.jpeg';
 
 const comparisonData = [
     { feature: 'Custom match with an expert for real-life academic and career advice', buddySystem: 'Yes', traditional: 'Yes' },
@@ -15,7 +16,7 @@ const comparisonData = [
 function MeetUncertain() {
     return (
         <div className='h-full'>
-            <div id='meetuncertain' className="min-h-screen w-full flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${Image})` }}>
+            <div id='meetuncertain' className="min-h-screen w-full flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${ImageBG})` }}>
                 <h1 className='pb-2 bg-white text-black text-4xl md:text-6xl mb-8 lg:mb-0'>Meet <span className='text-red-800'>(un)</span>certain</h1>
                 <div className='w-full lg:w-[50%] text-xl md:text-2xl space-y-8' >
                     <h1>We are <span className='bg-black italic'>not</span> another career counseling company.</h1>

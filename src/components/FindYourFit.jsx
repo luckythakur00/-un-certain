@@ -22,10 +22,10 @@ function FindYourFit() {
                     </div>
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
                         <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-red-800"></div>
-                        <button className='mt-2 bg-red-800 text-white rounded-full px-12 py-4 flex flex-col items-center'>
+                        <a href="#contact" className='mt-2 bg-red-700 text-white hover:bg-red-800 hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
                             <span className="text-xl lg:text-3xl font-semibold">Subscription Plan</span>
                             <span className="text-lg lg:text-2xl font-bold mt-1">₹18,000*</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -43,17 +43,17 @@ function FindYourFit() {
                     </div>
                     <div className="absolute -bottom-6 md:bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
                         <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-red-800"></div>
-                        <button className='mt-2 text-red-700 px-12 py-4 flex flex-col items-center'>
+                        <a href="#contact" className='mt-2 bg-red-700 hover:bg-red-800 hover:scale-105 transition-all duration-300 cursor-pointer rounded-4xl text-white px-12 py-3 flex flex-col items-center'>
                             <span className="text-2xl font-semibold">Pay as you go</span>
-                            <span className="text-4xl font-semibold mt-1">₹2500*</span>
-                        </button>
+                            <span className="text-3xl font-semibold mt-1">₹2500*</span>
+                        </a>
                     </div>
                 </div>
 
                 <h1 className="text-sm text-center pb-2 mt-10">* The pricing is exclusive of GST which is chargeable at 18%</h1>
                 <div className="h-24 bg-red-700" ></div>
             </div>
-        </div>
+        </div >
     )
 }
 
