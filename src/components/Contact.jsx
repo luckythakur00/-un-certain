@@ -13,7 +13,7 @@ const Contact = () => {
 
         <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row overflow-hidden">
           {/* Left Side: Contact Information */}
-          <div className="w-full lg:w-2/5 bg-red-600 text-white p-8 md:p-12 relative">
+          <div className="w-full lg:w-2/5 bg-red-700 text-white p-8 md:p-12 relative">
             <div className="absolute top-0 left-0 w-48 h-48 bg-red-700/50 rounded-full -mt-20 -ml-20"></div>
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-700/50 rounded-full -mb-16 -mr-12"></div>
 
