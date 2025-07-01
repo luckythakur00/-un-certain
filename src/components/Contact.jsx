@@ -14,7 +14,6 @@ const Contact = () => {
         <div className="bg-white rounded-2xl shadow-2xl flex flex-col lg:flex-row overflow-hidden">
           {/* Left Side: Contact Information */}
           <div className="w-full lg:w-2/5 bg-[#8B0000] text-white p-8 md:p-12 relative">
-            {/* <div className="absolute top-0 left-0 w-48 h-48 bg-red-700/50 rounded-full -mt-20 -ml-20"></div> */}
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-700/50 rounded-full -mb-16 -mr-12"></div>
 
             <h2 className="text-3xl font-bold mb-2">Contact Information</h2>
@@ -37,7 +36,7 @@ const Contact = () => {
 
             <div className="mt-12 pt-8 border-t border-red-500/50 flex space-x-4">
               <a href="https://wa.me/919910125735" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FaWhatsapp /></a>
-              <a href="#" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiInstagram /></a>
+              <a href="https://www.instagram.com/uncertain.in?igsh=cnQzNTV5azhvZWVy" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiInstagram /></a>
             </div>
           </div>
 

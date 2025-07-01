@@ -1,4 +1,3 @@
-import Image from '../assets/Image3.jpeg';
 import Image2 from '../assets/Image7.jpeg';
 import ImageBG from '../assets/Image8.jpeg';
 
@@ -18,7 +17,7 @@ function MeetUncertain() {
         <div className='h-full'>
             <div id='meetuncertain' className="min-h-screen w-full flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${ImageBG})` }}>
                 <h1 className='pb-2 bg-white text-black text-4xl md:text-6xl mb-8 lg:mb-0'>Meet <span className='text-[#DA2828] font-semibold'>(un)</span><span className='font-semibold' >certain</span></h1>
-                <div className='w-full lg:w-[50%] text-xl md:text-2xl space-y-8' >
+                <div className='w-full lg:w-[50%] text-lg md:text-xl space-y-8' >
                     <h1>We are <span className='bg-black italic'>not</span> another career counseling company.</h1>
                     <h2>We are a mentorship-focused community that helps students figure things out—academically, emotionally, and personally.</h2>
                     <h2>Because let’s be honest - Students today aren’t just choosing subjects or colleges. <br />They are dealing with pressure, uncertainty, and a world full of noise. That’s where we come in.</h2>
