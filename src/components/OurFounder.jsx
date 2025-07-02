@@ -1,8 +1,8 @@
 import bgImg from '../assets/Image6.jpeg'
-import founder1 from '../assets/Image9.jpeg'
-import founder2 from '../assets/Image5.jpeg'
-import founder3 from '../assets/Image4.jpeg'
-import founderBgImg from '../assets/Image8.jpeg'
+import founder1 from '../assets/founder1.jpeg'
+import founder2 from '../assets/founder2.jpeg'
+import founder3 from '../assets/founder3.jpeg'
+
 
 const founderDetails = [
     { name: "Dr. Malika Kukreja", description: "Malika is a passionate researcher and educator with a deep commitment to improving education and social outcomes. A graduate of Miranda House and Kirori Mal College, she earned her PhD from Panjab University while also working as an Academic Advisor and Trainer. Over the years, Malika has experience in teaching school students, collaborated in international education projects, and advised countless students — including family and friends who still turn to her for trusted advice. At (un)certain, Malika plays a key role in shaping academic strategy and personalized learning pathways. Her practical, compassionate approach ensures that each student is not just academically guided but also nurtured with care and clarity.", Image: founder1 },
@@ -19,10 +19,9 @@ function OurFounder() {
                     {
                         founderDetails.map((val, index) => (
                             <div key={index} className='flex flex-col w-full max-w-sm rounded-lg shadow-lg shadow-black/40 overflow-hidden'>
-                                <div>
-                                    <img src={val.Image} alt={val.name} className='h-96 w-full object-cover' />
+                                <div className='overflow-hidden' >
+                                    <img src={val.Image} alt={val.name} className='h-96 w-full object-cover object-top ' />
                                 </div>
-                                {/* <div className="flex-1 flex flex-col p-6 text-white" style={{ backgroundImage: `url(${founderBgImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}> */}
                                 <div className="flex-1 flex flex-col p-6 bg-white text-black">
                                     <h1>Co-founder and Mentor</h1>
                                     <h2 className='text-2xl font-bold py-2'>{val.name}</h2>
