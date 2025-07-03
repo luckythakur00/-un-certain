@@ -13,8 +13,8 @@ const PassionIcon = () => (
 const HelpCard = ({ icon, title, items, className }) => (
     <div className={`w-full p-8 md:p-10 lg:p-12 ${className}`}>
         {icon}
-        <h3 className='text-2xl text-black/90 mb-6 font-semibold'>{title}</h3>
-        <ul className='list-disc pl-5 space-y-3 text-black/70'>
+        <h3 className='text-lg md:text-2xl text-black/90 mb-6 font-semibold'>{title}</h3>
+        <ul className='text-base list-disc pl-5 space-y-3 text-black/70'>
             {items.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
     </div>

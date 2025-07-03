@@ -1,7 +1,55 @@
-import { FiPhone, FiMail, FiMapPin, FiInstagram, FiSend } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiSend } from 'react-icons/fi';
+import { FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!firstName || !email || !mobile || !message) {
+      alert("Fill all the details");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const userData = {
+        access_key: import.meta.env.VITE_MAIL_ACCESS_KEY,
+        name: firstName + lastName,
+        email: email,
+        mobile: mobile,
+        message: message
+      };
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(userData)
+      }).then((res) => res.json());
+
+      if (res.success) {
+        alert("Message sent successfully");
+      } else {
+        alert("Server Error!")
+      }
+    } catch (error) {
+      alert("Something went wrong!!!");
+    } finally {
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setMobile('');
+      setMessage('');
+      setSubmitting(false);
+    }
+  }
 
   return (
     <div id='contact' className="bg-gray-50 min-h-screen flex items-center justify-center p-4">
@@ -17,61 +65,68 @@ const Contact = () => {
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-700/50 rounded-full -mb-16 -mr-12"></div>
 
             <h2 className="text-3xl font-bold mb-2">Contact Information</h2>
-            <p className="mb-8 text-red-100">Say something to start a live chat!</p>
+            {/* <p className="mb-8 text-red-100">Say something to start a live chat!</p> */}
+            <p className="mb-2 text-red-100">Say something to start a live chat!</p>
+            <p className='mb-8'>Have questions, concerns, or just need guidance? We're here to support students on their journey — reach out via call, email, or connect with us on social media.</p>
 
             <div className="space-y-6">
               <div className="flex items-center">
-                <FiPhone className="w-6 h-6 mr-4" />
+                <FiPhone className="w-6 h-6 mr-4 " />
                 <a href="tel:+919910125735" className="block hover:underline">+91 9910125735</a>
               </div>
               <div className="flex items-center">
                 <FiMail className="w-6 h-6 mr-4" />
-                <a href="mailto:info@mysite.com" className="block mt-2 hover:underline">info@mysite.com</a>
+                <a href="mailto:info@mysite.com" className="block hover:underline">info@mysite.com</a>
               </div>
-              <div className="flex items-start">
-                <FiMapPin className="w-6 h-6 mr-4 mt-1 flex-shrink-0" />
+              {/* <div className="flex items-start">
+                <FiMapPin className="w-6 h-6 mr-4 flex-shrink-0" />
                 <span>M3M Golf Estate, Sector 65,Gurugram, 122102</span>
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-12 pt-8 border-t border-red-500/50 flex space-x-4">
               <a href="https://wa.me/919910125735" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FaWhatsapp /></a>
               <a href="https://www.instagram.com/uncertain.in?igsh=cnQzNTV5azhvZWVy" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiInstagram /></a>
+              <a href="https://www.instagram.com/uncertain.in?igsh=cnQzNTV5azhvZWVy" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiFacebook /></a>
+              <a href="https://www.linkedin.com/company/un-certain/?lipi=urn%3Ali%3Apage%3Acompanies_company_people_index%3Bdf3ced32-c118-4aa5-99ab-fe089a52c50d" target='_blank' className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FaLinkedin /></a>
             </div>
           </div>
 
           {/* Right Side: Contact Form */}
           <div className="w-full lg:w-3/5 bg-white p-8 md:p-12">
-            <form>
+            <form onSubmit={handleSubmit} >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="first-name" className="block text-gray-700 font-semibold mb-2">First Name</label>
-                  <input type="text" id="first-name" placeholder='First Name' className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
+                  <input type="text" id="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name' className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
                 </div>
                 <div>
                   <label htmlFor="last-name" className="block text-gray-700 font-semibold mb-2">Last Name</label>
-                  <input type="text" id="last-name" placeholder="Last Name" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
+                  <input type="text" id="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
-                  <input type="email" id="email" placeholder='Email' className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
+                  <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
                 </div>
                 <div>
                   <label htmlFor="phone-number" className="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                  <input type="tel" id="phone-number" placeholder="Phone" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
+                  <input type="tel" id="phone-number" value={mobile} onChange={(e) => setMobile(e.target.value)} placeholder="Phone" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
                 </div>
               </div>
 
               <div className="mb-6">
                 <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
-                <textarea id="message" rows="8" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" placeholder="Write your message.."></textarea>
+                <textarea id="message" rows="8" value={message} onChange={(e) => setMessage(e.target.value)} className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" placeholder="Write your message.."></textarea>
               </div>
 
               <div className="text-right">
-                <button type="submit" className="bg-[#8B0000] text-white cursor-pointer font-bold py-3 px-8 rounded-lg hover:bg-[#730000] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center ml-auto">Send Message<FiSend className="ml-3" /></button>
+                <button type="submit" disabled={submitting} className={`bg-[#8B0000] text-white ${submitting ? 'cursor-auto' : 'cursor-pointer hover:bg-[#730000] hover:scale-105'} font-bold py-3 px-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300 transform flex items-center justify-center ml-auto`}>
+                  {submitting ? 'Sending...' : 'Send Message'}
+                  {!submitting && <FiSend size={18} />}
+                </button>
               </div>
             </form>
           </div>

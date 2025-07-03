@@ -2,12 +2,12 @@ function FindYourFit() {
 
     return (
         <div id="findyourfit">
-            <div className='h-40 md:h-60 bg-[#8B0000] flex justify-center items-center'>
-                <h1 className='text-4xl md:text-6xl text-white'>Find your fit</h1>
+            <div className='h-32 md:h-40 bg-[#8B0000] flex justify-center items-center'>
+                <h1 className='text-3xl md:text-4xl lg:text-5xl text-white'>Find your fit</h1>
             </div>
             <div>
                 <div className="relative flex flex-col items-center pb-32">
-                    <div className='min-h-[50vh] w-[90vw] lg:w-[70vw] mt-24 m-auto px-10 py-6 border-2 border-red-800'>
+                    <div className='min-h-[50vh] w-[90vw] lg:w-[70vw] mt-10 m-auto px-10 py-6 border-2 border-red-800'>
                         <h1 className='mb-8'>A valuable customised option for those looking for short-term and long-term planning and goals fulfillment. This model is designed to offer commitment and build long-term relationships with the buddies which makes both the students and the parents comfortable. Each session is age-appropriate, culturally sensitive, and always confidential — so students feel supported, and parents feel assured.</h1>
                         <h2 className='mb-4'>Inclusions: </h2>
                         <ol className='list-decimal pl-4 text-black/80 space-y-2'>
@@ -21,17 +21,16 @@ function FindYourFit() {
                             <li>WhatsApp and email support (assured response within 24 hours on a working day)</li>
                         </ol>
                     </div>
-                    {/* This Div */}
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
                         <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-red-800"></div>
-                        <a href="#contact" className='w-72 lg:w-96 mt-2 bg-[#8B0000] text-white hover:bg-[#730000] hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
-                            <span className="text-xl lg:text-3xl font-semibold">Subscription Plan</span>
-                            <span className="text-lg lg:text-2xl font-bold mt-1">₹18,000*</span>
+                        <a href="#contact" className='w-72 lg:w-80 mt-2 bg-[#8B0000] text-white hover:bg-[#730000] hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
+                            <span className="text-lg lg:text-2xl font-semibold">Subscription Plan</span>
+                            <span className="text-lg lg:text-xl font-bold mt-1">₹18,000*</span>
                         </a>
                     </div>
                 </div>
 
-                <h1 className="text-center my-14 text-5xl font-semibold" >OR</h1>
+                <h1 className="text-center my-14 text-4xl font-semibold" >OR</h1>
 
                 <div className="relative flex flex-col items-center pb-32">
                     <div className='min-h-[20vh] w-[90vw] lg:w-[70vw] m-auto px-10 py-6 border-2 border-red-800'>
@@ -43,17 +42,16 @@ function FindYourFit() {
                             <li>Suitable for drop-in academic decisions, peer pressure talk, or quick check-ins</li>
                         </ol>
                     </div>
-                    {/* This Div */}
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
                         <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-red-800"></div>
-                        <a href="#contact" className='w-72 lg:w-96 mt-2 bg-[#8B0000] text-white hover:bg-[#730000] hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
-                            <span className="text-xl lg:text-3xl font-semibold">Pay as you go</span>
-                            <span className="text-lg lg:text-2xl font-bold mt-1">₹2500*</span>
+                        <a href="#contact" className='w-72 lg:w-80 mt-2 bg-[#8B0000] text-white hover:bg-[#730000] hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
+                            <span className="text-lg lg:text-2xl font-semibold">Pay as you go</span>
+                            <span className="text-lg lg:text-xl font-bold mt-1">₹2,500*</span>
                         </a>
                     </div>
                 </div>
 
-                <h1 className="text-sm text-center pb-2 mt-10">* The pricing is exclusive of GST which is chargeable at 18%</h1>
+                <h1 className="text-sm text-center pb-2 px-6 mt-10">* The pricing is exclusive of GST which is chargeable at 18%</h1>
                 <div className="h-24 bg-[#8B0000]" ></div>
             </div>
         </div >

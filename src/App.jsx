@@ -15,6 +15,9 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Todo:-
+  // Add another SVG in the Help Section
+
   return (
     <div className='relative'>
       <Header />

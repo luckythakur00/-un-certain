@@ -15,26 +15,31 @@ const comparisonData = [
 function MeetUncertain() {
     return (
         <div className='h-full'>
-            <div id='meetuncertain' className="min-h-screen w-full flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${ImageBG})` }}>
-                <h1 className='pb-2 bg-white text-black text-4xl md:text-6xl mb-8 lg:mb-0'>Meet <span className='text-[#DA2828] font-semibold'>(un)</span><span className='font-semibold' >certain</span></h1>
-                <div className='w-full lg:w-[50%] text-lg md:text-xl space-y-8' >
+            {/* <div id='meetuncertain' className="min-h-[50vh] md:min-h-screen w-full py-16 md:py-0 flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${ImageBG})` }}> */}
+            <div id='meetuncertain' className="min-h-[50vh] md:min-h-[70vh] w-full py-16 md:py-0 flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-center text-white p-4 lg:p-0" style={{ backgroundImage: `url(${ImageBG})` }}>
+                <h1 className='pb-2 bg-white text-black text-3xl md:text-5xl mb-8 lg:mb-0'>Meet <span className='text-[#DA2828] font-semibold'>(un)</span><span className='font-semibold' >certain</span></h1>
+                <div className='w-full lg:w-[50%] text-base md:text-lg space-y-8' >
                     <h1>We are <span className='bg-black italic'>not</span> another career counseling company.</h1>
-                    <h2>We are a mentorship-focused community that helps students figure things out—academically, emotionally, and personally.</h2>
-                    <h2>Because let’s be honest - Students today aren’t just choosing subjects or colleges. <br />They are dealing with pressure, uncertainty, and a world full of noise. That’s where we come in.</h2>
-                    <p className=''>At (un)certain, students are: <br />
+                    {/* <h2>We are a mentorship-focused community that helps students figure things out—academically, emotionally, and personally.</h2> */}
+                    <h2> <span className='text-[#DA2828] font-semibold bg-white p-1 pr-0' >(un)</span><span className='bg-white text-black font-semibold p-1 pl-0'>certain</span> is a mentorship-first community for students aged 11–18. Our mentors don’t just tell students what to do — they help them actually do it. From building daily routines and staying consistent with schoolwork to exploring hobbies, working on real projects, and making better choices — we’re there at every step, not just the big milestones.</h2>
+                    {/* <h2>Because let’s be honest - Students today aren’t just choosing subjects or colleges. <br />They are dealing with pressure, uncertainty, and a world full of noise. That’s where we come in.</h2> */}
+                    <h2>Because let’s be honest: students today aren’t just choosing subjects or colleges. They’re navigating pressure, distractions, and endless noise about what success should look like. That’s where we come in.</h2>
+                    <h2>We keep parents involved too — through progress updates, 1:1 check-ins, and workshops — because real guidance only works when students and parents grow together. </h2>
+                    {/* <p className=''>At (un)certain, students are: <br />
                         Mentored, not managed <br />
                         Guided, not told <br />
                         Heard, not handed answers
-                    </p>
+                    </p> */}
                 </div>
             </div>
 
-            <div id='ourapproach' className="min-h-screen w-full px-4 md:px-16 py-16 lg:py-0 flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-gray-50 text-black/80">
+            {/* <div id='ourapproach' className="min-h-screen w-full px-4 md:px-16 py-16 lg:py-0 flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-gray-50 text-black/80"> */}
+            <div id='ourapproach' className="min-h-[50vh] md:min-h-[70vh] w-full px-4 md:px-16 py-16 lg:py-0 flex flex-col lg:flex-row justify-center lg:justify-around items-center bg-gray-50 text-black/80">
                 <div className='w-full lg:w-[40%] text-center lg:text-left mb-8 lg:mb-0'>
-                    <h1 className='text-black/90 text-4xl md:text-6xl'>Our Approach</h1>
+                    <h1 className='text-black/90 text-3xl md:text-5xl'>Our Approach</h1>
                 </div>
-                <div className='w-full lg:w-[50%] text-lg md:text-xl space-y-8' >
-                    <h1>At <span className='text-[#8B0000] font-semibold'>(un)</span><span className='font-semibold' >certain</span>, we know students do not just need advice — they need someone who gets it. Someone who listens, keeps them accountable, and actually shows up.</h1>
+                <div className='w-full lg:w-[50%] text-base md:text-lg space-y-8' >
+                    <h1>At <span className='text-[#DA2828] font-semibold'>(un)</span><span className='font-semibold text-black' >certain</span>, we know students do not just need advice — they need someone who gets it. Someone who listens, keeps them accountable, and actually shows up.</h1>
                     <h2>That is why we implemented the <span>Buddy System.</span></h2>
                     <p>Each student is paired with a dedicated buddy — a relatable mentor who understands their world, speaks their language, and helps them navigate academics, tough decisions, emotional stress, and everything in between.</p>
                     <p>It is simple:</p>
@@ -44,7 +49,7 @@ function MeetUncertain() {
 
             <div className="min-h-screen w-full flex justify-center items-center bg-cover bg-center p-4 sm:p-8" style={{ backgroundImage: `url(${Image2})` }}>
                 <div className="w-full max-w-6xl bg-white text-black p-6 sm:p-10 rounded-lg shadow-2xl">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black/80 text-center mb-8">How are we different from traditional counselling?</h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black/80 text-center mb-8">How are we different from traditional counselling?</h2>
                     <div className="overflow-x-auto">
                         <table className="w-full min-w-[700px] text-left border-collapse">
                             <thead>
