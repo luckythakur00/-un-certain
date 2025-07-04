@@ -25,10 +25,10 @@ const Header = () => {
     ];
 
     return (
-        <header className={`w-full fixed top-0 left-0 z-50 transition-all bg-white duration-300 ${scrolled ? 'shadow-md py-2' : 'py-4'}`}>
-            <nav className="container mx-auto  flex justify-between px-8 items-center">
+        <header className={`w-full fixed top-0 left-0 z-50 transition-all bg-white duration-300 ${scrolled ? 'shadow-md py-2' : 'py-2 md:py-4'}`}>
+            <nav className=" flex justify-between px-6 sm:px-10 lg:px-14 items-center">
                 <a href="#home">
-                    <img src={logo} alt="Uncertain Logo" className="h-9 w-40 md:h-12 md:w-auto transition-all duration-300" />
+                    <img src={logo} alt="Uncertain Logo" className="h-8 sm:h-9 md:h-12 w-40 md:w-auto transition-all duration-300" />
                 </a>
                 <div className="hidden lg:flex items-center space-x-8">
                     {
@@ -39,7 +39,7 @@ const Header = () => {
                 </div>
 
                 <div className="lg:hidden">
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none p-2" aria-label="Toggle menu" aria-expanded={isOpen}>{isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}</button>
+                    <button onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none p-2" aria-label="Toggle menu" aria-expanded={isOpen}>{isOpen ? <FaTimes size={24} /> : <FaBars className={`size-6 md:size-7`} />}</button>
                 </div>
             </nav>
 

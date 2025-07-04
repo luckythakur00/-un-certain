@@ -1,93 +1,60 @@
-// import { FiCheckCircle, FiAlertTriangle, FiX } from 'react-icons/fi';
+const ICONS = {
+    success: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    ),
+    error: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    )
+};
 
-// const Alert = ({ type, title, message, onClose }) => {
-//     const alertStyles = {
-//         success: {
-//             bgColor: 'bg-green-800/20',
-//             borderColor: 'border-green-500',
-//             textColor: 'text-green-200',
-//             iconColor: 'text-green-400',
-//             Icon: FiCheckCircle,
-//         },
-//         error: {
-//             bgColor: 'bg-red-800/20',
-//             borderColor: 'border-red-500',
-//             textColor: 'text-red-200',
-//             iconColor: 'text-red-400',
-//             Icon: FiAlertTriangle,
-//         },
-//     };
+const TYPE_CLASSES = {
+    success: {
+        container: 'bg-green-100 border-green-400',
+        icon: 'text-green-500',
+        title: 'text-green-800',
+        message: 'text-green-700',
+        closeButton: 'text-green-500 hover:bg-green-200 focus:ring-green-600',
+    },
+    error: {
+        container: 'bg-red-100 border-red-400',
+        icon: 'text-red-500',
+        title: 'text-red-800',
+        message: 'text-red-700',
+        closeButton: 'text-red-500 hover:bg-red-200 focus:ring-red-600',
+    }
+};
 
-//     const styles = alertStyles[type] || alertStyles.error;
-//     const Icon = styles.Icon;
-
-//     return (
-//         <div className={`${styles.bgColor} border ${styles.borderColor} ${styles.textColor} p-4 rounded-lg flex`} role="alert">
-//             <div className={`mr-3 ${styles.iconColor}`}>
-//                 <Icon className="w-6 h-6" />
-//             </div>
-//             <div className="flex-grow">
-//                 <p className="font-bold">{title}</p>
-//                 <p className="text-sm">{message}</p>
-//             </div>
-//             <div className="ml-3">
-//                 <button onClick={onClose} className={`p-1.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 ${styles.textColor} ${styles.bgColor} hover:bg-opacity-50`} aria-label="Dismiss">
-//                     <FiX className="h-5 w-5" />
-//                 </button>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Alert;
-
-
-
-
-
-
-
-
-
-
-import { FiCheckCircle, FiAlertTriangle, FiX } from 'react-icons/fi';
-import { IconBase } from 'react-icons/lib';
-
-const Alert = ({ type, title, message, onClose }) => {
-    // const alertStyles = {
-    //     success: {
-    //         bgColor: 'bg-green-800/20',
-    //         borderColor: 'border-green-500',
-    //         textColor: 'text-green-200',
-    //         iconColor: 'text-green-400',
-    //         Icon: FiCheckCircle,
-    //     },
-    //     error: {
-    //         bgColor: 'bg-red-800/20',
-    //         borderColor: 'border-red-500',
-    //         textColor: 'text-red-200',
-    //         iconColor: 'text-red-400',
-    //         Icon: FiAlertTriangle,
-    //     },
-    // };
-
-    // const styles = alertStyles[type] || alertStyles.error;
-    // const Icon = styles.Icon;
+const Alert = ({ type = 'info', title, message, onClose }) => {
+    const classes = TYPE_CLASSES[type] || TYPE_CLASSES.info;
 
     return (
-        <div className={` border p-4 rounded-lg flex`} role="alert">
-            <div className={`mr-3`}>
-                {/* <Icon className="w-6 h-6" /> */}
-                <IconBase className="w-6 h-6" />
-            </div>
-            <div className="flex-grow">
-                <p className="font-bold">Error</p>
-                <p className="text-sm">All Fields are required</p>
-            </div>
-            <div className="ml-3">
-                <button className={`p-1.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-opacity-50`} aria-label="Dismiss">
-                    <FiX className="h-5 w-5" />
-                </button>
+        <div className={`rounded-md border p-4 shadow-sm ${classes.container}`} role="alert">
+            <div className="flex">
+                <div className={`flex-shrink-0 ${classes.icon}`}>{ICONS[type]}</div>
+                <div className="ml-3 flex-1 md:flex md:justify-between">
+                    <div>
+                        <h3 className={`text-sm font-medium ${classes.title}`}>{title}</h3>
+                        <div className={`mt-2 text-sm ${classes.message}`}><p>{message}</p></div>
+                    </div>
+                    {
+                        onClose && (
+                            <div className="pl-3">
+                                <div className="-mx-1.5 -my-1.5">
+                                    <button type="button" onClick={onClose} className={`inline-flex rounded-md p-1.5 focus:outline-none focus:ring-2 focus:ring-offset-2 ${classes.closeButton} ${classes.container}`}>
+                                        <span className="sr-only">Dismiss</span>
+                                        <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
             </div>
         </div>
     );
