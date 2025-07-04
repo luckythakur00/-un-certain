@@ -51,7 +51,7 @@ function MeetUncertain() {
                             <thead>
                                 <tr className="bg-[#8B0000] text-white">
                                     <th className="p-4 text-lg font-semibold">What you get</th>
-                                    <th className="p-4 text-lg font-semibold text-center">Buddy System</th>
+                                    <th className="p-4 text-lg font-semibold text-center">(un)certain</th>
                                     <th className="p-4 text-lg font-semibold text-center">Traditional Counselling</th>
                                 </tr>
                             </thead>
