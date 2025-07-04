@@ -25,7 +25,7 @@ const Footer = () => {
                   <a href="tel:+919910125735" className="text-lg hover:underline">+91 99101 25735</a>
                 </li>
                 <li>
-                  <a href="mailto:info@uncertain.com" className="text-lg hover:underline">info@uncertain.com</a>
+                  <a href="mailto:info@uncertain.in" className="text-lg hover:underline">info@uncertain.in</a>
                 </li>
               </ul>
             </div>

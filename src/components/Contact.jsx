@@ -100,7 +100,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <FiMail className="w-6 h-6 mr-4" />
-                <a href="mailto:info@uncertain.com" className="block hover:underline">info@uncertain.com</a>
+                <a href="mailto:info@uncertain.in" className="block hover:underline">info@uncertain.in</a>
               </div>
             </div>
 
