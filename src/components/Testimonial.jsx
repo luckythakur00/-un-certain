@@ -107,7 +107,7 @@ function Testimonial() {
 
     return (
         // <div className="bg-white py-12 sm:py-16">
-        <div className=" py-14 pb-32 bg-green-400">
+        <div className=" py-14 pb-32">
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Testimonials</h2>
