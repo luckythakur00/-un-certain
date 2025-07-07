@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 const testimonialsData = [
     {
         quote: "Before reaching out to (un)certain, I felt lost and overwhelmed by the vast number of career paths and universities. But just four months of counselling changed everything. Malika gave me a structured plan under which I attended summer school, built AI projects and did community service which really touched my heart. This personalized support brought me much-needed clarity and confidence. Today, I feel far more prepared and optimistic about my future. I'm genuinely grateful for the journey they've helped me begin.",
-        name: '-Meet Singh',
+        name: 'Meet Singh',
         relation: 'Class 12, Mayo College, Ajmer',
         imageUrl: "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
     },
