@@ -1,41 +1,24 @@
-import { useState, useEffect, useRef } from 'react';
-import image1 from '../assets/founder1.jpeg';
-import image2 from '../assets/founder2.jpeg';
-import image3 from '../assets/founder3.jpeg';
-import image4 from '../assets/founder2.jpeg';
-import image5 from '../assets/founder3.jpeg';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 const testimonialsData = [
     {
         quote: "Before reaching out to (un)certain, I felt lost and overwhelmed by the vast number of career paths and universities. But just four months of counselling changed everything. Malika gave me a structured plan under which I attended summer school, built AI projects and did community service which really touched my heart. This personalized support brought me much-needed clarity and confidence. Today, I feel far more prepared and optimistic about my future. I'm genuinely grateful for the journey they've helped me begin.",
         name: '-Meet Singh',
         relation: 'Class 12, Mayo College, Ajmer',
-        imageUrl: image1
+        imageUrl: "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
     },
     {
-        quote: "(un)certain provided the structure and accountability my daughter needed. The focus on real-world projects, not just test scores, has prepared her for college in a way traditional counseling never could. We're so grateful.",
-        name: 'Rajesh Singh',
-        relation: 'Parent of Priya, 11th Grade',
-        imageUrl: image2
+        quote: "We honestly can’t thank Malika, Rhythm & Sagrika enough for the support they’ve given our child. It’s not easy figuring out what’s needed these days to build a strong college profile, but they’ve made the whole process feel so much clearer. From helping him plan his activities to guiding him on what really matters in school they’ve been there through it all, and with so much patience and genuine care.  They have treated our child like family. We feel really lucky to have them around at this stage in his life. We feel truly fortunate to have them walk this journey with us. Thank you for making a difference in our child’s future.",
+        name: 'Mr. Kapil Arora, Father of Adam Arora',
+        relation: 'Class 10, Pathways School, Gurugram',
+        imageUrl: "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
     },
     {
-        quote: "As a parent, seeing your child struggle with pressure is hard. The mentors here created a judgement-free space that allowed my son to open up about his anxieties and set achievable goals. The progress has been phenomenal.",
-        name: 'Sunita Sharma',
-        relation: 'Parent of Aarav, 10th Grade',
-        imageUrl: image3
+        quote: "Transitioning from CBSE to IB was overwhelming at first, but my mentors helped me adjust smoothly. They encouraged me to take part in MUNs, debates, and even get involved in community service — which led to my ‘Wheels of Change’ project. Our sessions weren’t just about academics — we talked about everything from golf and drumming to personal stuff I didn’t feel comfortable sharing elsewhere. The regular check-ins, and the space to speak openly with both me and my parents, made all the difference.",
+        name: 'Adam Arora',
+        relation: 'Class 10, Pathways School, Gurugram',
+        imageUrl: "https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg"
     },
-    {
-        quote: "The personalized attention and focus on both academic and personal growth is what sets (un)certain apart. They helped my child build a passion project from scratch, which was a huge talking point in her college applications.",
-        name: 'Vikram Desai',
-        relation: 'Parent of Meera, Class 12',
-        imageUrl: image4
-    },
-    {
-        quote: "The Buddy System was a game-changer. My son finally had someone to talk to who wasn't a parent or teacher, but a mentor who actually understood him. His confidence and grades have both seen a remarkable improvement.",
-        name: 'Anjali Mehta',
-        relation: 'Parent of Rohan, 12th Grade',
-        imageUrl: image5
-    }
 ];
 
 function Testimonial() {
@@ -46,17 +29,30 @@ function Testimonial() {
 
     const slides = [testimonialsData[testimonialsData.length - 1], ...testimonialsData, testimonialsData[0]];
 
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         if (!isTransitioning || isAnimating) return;
+        setIsAnimating(true);
         setCurrentIndex(prev => prev + 1);
-        setIsAnimating(true);
-    };
+    }, [isTransitioning, isAnimating]);
 
-    const handlePrev = () => {
+    const handlePrev = useCallback(() => {
         if (!isTransitioning || isAnimating) return;
-        setCurrentIndex(prev => prev - 1);
         setIsAnimating(true);
-    };
+        setCurrentIndex(prev => prev - 1);
+    }, [isTransitioning, isAnimating]);
+
+    const stopAutoplay = useCallback(() => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    }, []);
+
+    const startAutoplay = useCallback(() => {
+        stopAutoplay();
+        intervalRef.current = setInterval(() => {
+            handleNext();
+        }, 5000);
+    }, [handleNext, stopAutoplay]);
 
     useEffect(() => {
         if (currentIndex === 0) {
@@ -91,19 +87,9 @@ function Testimonial() {
     }, [isAnimating]);
 
     useEffect(() => {
-        const startAutoplay = () => {
-            intervalRef.current = setInterval(() => {
-                handleNext();
-            }, 5000);
-        };
-        const stopAutoplay = () => {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        };
-
         startAutoplay();
-
         return () => stopAutoplay();
-    }, []);
+    }, [startAutoplay, stopAutoplay]);
 
     return (
         <div id='testimonials' className="py-14 pb-32">
@@ -112,24 +98,24 @@ function Testimonial() {
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Testimonials</h2>
                 </div>
 
-                <div className="mt-12 relative">
+                <div className="mt-12 relative" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
                     <div className="overflow-hidden w-full rounded-2xl shadow-lg">
                         <div className="flex" style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none', willChange: 'transform' }}>
                             {
                                 slides.map((testimonial, index) => (
-                                    <div key={index} className="w-full flex-shrink-0 px-4 bg-[#8B0000]">
-                                        <div className="flex flex-col rounded-2xl text-white p-6 md:p-8 min-h-[300px] md:min-h-[280px]">
+                                    <div key={index} className="min-h-[100px] w-full flex-shrink-0 px-4 bg-[#8B0000]">
+                                        <div className="min-h-[300px] md:min-h-[280px] flex flex-col rounded-2xl text-white p-4 md:p-8">
                                             <div className="flex-grow">
-                                                <blockquote className="text-base md:text-lg leading-relaxed italic">
+                                                <blockquote className="text-sm md:text-base lg:text-lg leading-relaxed italic">
                                                     <p>"{testimonial.quote}"</p>
                                                 </blockquote>
                                             </div>
                                             <footer className="mt-6">
                                                 <div className="flex items-center gap-x-4">
-                                                    <img src={testimonial.imageUrl} alt={`Photo of ${testimonial.name}`} className="h-12 w-12 rounded-full object-cover border-2 border-white/50" />
+                                                    <img src={testimonial.imageUrl} alt={`Photo of ${testimonial.name}`} className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-white/50" />
                                                     <div>
-                                                        <div className="font-semibold">{testimonial.name}</div>
-                                                        <div className="text-sm text-white/90">{testimonial.relation}</div>
+                                                        <div className="text-sm md:text-base font-semibold">{testimonial.name}</div>
+                                                        <div className="text-xs md:text-sm text-white/90">{testimonial.relation}</div>
                                                     </div>
                                                 </div>
                                             </footer>
@@ -154,14 +140,13 @@ function Testimonial() {
                                         if (isAnimating) return;
                                         setCurrentIndex(index + 1);
                                         setIsAnimating(true);
-                                    }} className={`w-3 h-3 rounded-full transition-colors ${isActive ? 'bg-gray-800' : 'bg-gray-300 hover:bg-gray-400'}`} aria-label={`Go to slide ${index + 1}`} />
+                                    }} className={`w-3 h-3 rounded-full cursor-pointer transition-colors ${isActive ? 'bg-gray-800' : 'bg-gray-300 hover:bg-gray-400'}`} aria-label={`Go to slide ${index + 1}`} />
                                 );
                             })
                         }
                     </div>
                 </div>
             </div>
-            {/* <div className='h-24 bg-[#8B0000] mt-20' ></div> */}
         </div>
     );
 }
