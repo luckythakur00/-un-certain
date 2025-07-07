@@ -120,41 +120,7 @@ const Contact = () => {
                 )
               }
             </div>
-
-            {/* <form onSubmit={handleSubmit} >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                <div>
-                  <label htmlFor="first-name" className="block text-gray-700 font-semibold mb-2">First Name</label>
-                  <input type="text" id="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name' className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
-                </div>
-                <div>
-                  <label htmlFor="last-name" className="block text-gray-700 font-semibold mb-2">Last Name</label>
-                  <input type="text" id="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                <div>
-                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
-                  <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
-                </div>
-                <div>
-                  <label htmlFor="phone-number" className="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                  <input type="tel" id="phone-number" value={mobile} onChange={(e) => setMobile(e.target.value)} placeholder="Phone" className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" />
-                </div>
-              </div>
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
-                <textarea id="message" rows="3" value={message} onChange={(e) => setMessage(e.target.value)} className="w-full p-3 bg-gray-100 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 transition-shadow" placeholder="Write your message.."></textarea>
-              </div>
-              <div className="text-right">
-                <button type="submit" disabled={submitting} className={`bg-[#8B0000] text-white ${submitting ? 'cursor-auto' : 'cursor-pointer hover:bg-[#730000] hover:scale-105'} font-bold py-3 px-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300 transform flex items-center justify-center ml-auto`}>
-                  {submitting ? 'Sending...' : 'Send Message'}
-                  {!submitting && <FiSend size={18} />}
-                </button>
-              </div>
-            </form> */}
             <>
-              {/* Hidden static form for Netlify to detect */}
               <form name="contact" netlify hidden>
                 <input type="text" name="first-name" />
                 <input type="text" name="last-name" />
@@ -163,7 +129,6 @@ const Contact = () => {
                 <textarea name="message"></textarea>
               </form>
 
-              {/* Your actual working form */}
               <form name="contact" netlify onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                   <div>
@@ -197,7 +162,6 @@ const Contact = () => {
                 </div>
               </form>
             </>
-
           </div>
         </div>
       </div>
