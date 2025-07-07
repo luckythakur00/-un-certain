@@ -21,7 +21,6 @@ const Header = () => {
         { title: 'How We Help?', href: '#howwehelp' },
         { title: 'Find Your Fit', href: '#findyourfit' },
         { title: 'Our Founders', href: '#ourfounders' },
-        { title: 'Testimonials', href: '#testimonials' },
         { title: 'Contact', href: '#contact' },
     ];
 
