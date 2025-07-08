@@ -68,31 +68,22 @@ import { Helmet } from "react-helmet";
 
 function FindYourFit() {
 
-    // Step 2: Define your SEO metadata for this specific page
-    const pageTitle = "Find Your Fit: Pricing & Plans | (un)certain Mentorship";
+    const pageTitle = "Find Your Fit: Pricing & Plans | uncertain.in Mentorship";
     const pageDescription = "Explore (un)certain's flexible mentorship plans. Choose our comprehensive Subscription Plan for long-term growth or the 'Pay As You Go' option for specific guidance. Find the perfect fit today.";
-    const canonicalUrl = "https://uncertain.in/find-your-fit"; // Use your actual page URL
+    const canonicalUrl = "https://uncertain.in/find-your-fit";
 
     return (
-        // The root element is a Fragment to accommodate Helmet without adding a DOM element
         <>
-            {/* --- SEO Head Management --- */}
-            {/* Step 3: Add the Helmet component with all the necessary tags */}
             <Helmet>
                 <title>{pageTitle}</title>
                 <meta name="description" content={pageDescription} />
                 <link rel="canonical" href={canonicalUrl} />
-
-                {/* --- Open Graph / Social Media Tags --- */}
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={pageDescription} />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:type" content="website" />
-                {/* Add a relevant image for social sharing if you have one */}
-                {/* <meta property="og:image" content="https://uncertain.in/your-pricing-image.jpg" /> */}
             </Helmet>
 
-            {/* --- Your Original UI (Unchanged) --- */}
             <div id="findyourfit">
                 <div className='h-32 md:h-40 bg-[#8B0000] flex justify-center items-center'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl text-white'>Find your fit</h1>

@@ -51,12 +51,10 @@ import Hero from './components/Hero';
 import MeetUncertain from './components/MeetUncertain';
 import OurFounder from './components/OurFounder';
 import Testimonial from './components/Testimonial';
-import HeroImage from './assets/Image2.jpeg'; // Step 2: Import your main hero image for the social media tag
 import { Helmet } from 'react-helmet';
 
 function App() {
 
-  // Step 3: Define the single, authoritative SEO metadata for your homepage
   const pageTitle = "(un)certain: Personalized Mentorship for Student Success";
   const pageDescription = "At (un)certain, we believe every student deserves a mentor. Discover your strengths and make confident decisions with our personalized guidance. Start with a free consultation.";
   const canonicalUrl = "https://uncertain.in/";
@@ -67,22 +65,19 @@ function App() {
 
   return (
     <div className='relative'>
-      {/* Step 4: Add the single Helmet component here. This will now control the entire page title. */}
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
 
-        {/* Open Graph / Social Media Tags */}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={HeroImage} /> {/* Use the imported hero image */}
+        <meta property="og:image" content={<Hero />} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="(un)certain" />
       </Helmet>
 
-      {/* The rest of your UI remains exactly the same */}
       <Header />
       <div className='mt-16 md:mt-20'>
         <Hero />

@@ -68,7 +68,6 @@ import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { HiOutlineAcademicCap } from "react-icons/hi";
 import { Helmet } from "react-helmet";
 
-// This component remains unchanged
 const HelpCard = ({ icon, title, items, className }) => (
     <div className={`w-full p-8 md:p-10 lg:p-12 ${className}`}>
         <div className="mb-5" >{icon}</div>
@@ -80,12 +79,10 @@ const HelpCard = ({ icon, title, items, className }) => (
 );
 
 function Help() {
-    // Step 2: Define your SEO metadata
     const pageTitle = "How We Help | (un)certain Mentorship Program";
     const pageDescription = "Explore the ways (un)certain supports students: academic guidance without pressure, passion project development, emotional well-being in a safe space, and real-world readiness.";
-    const canonicalUrl = "https://uncertain.in/how-we-help"; // Use your page's actual URL
+    const canonicalUrl = "https://uncertain.in/how-we-help";
 
-    // This data structure remains unchanged
     const section1 = {
         left: {
             icon: <HiOutlineAcademicCap size={40} />,
@@ -99,7 +96,6 @@ function Help() {
         }
     };
 
-    // This data structure remains unchanged
     const section2 = [
         { icon: <FaHandHoldingHeart size={40} />, title: 'The Safe Space', items: ['Build emotional resilience through guided conversations', 'Speak openly about bullying, stress, relationships, and self-esteem', 'Receive support from trained mentors and psychologists (if need be)'] },
         { icon: <FaGlobeAmericas size={40} />, title: 'Extracurricular Exploration', items: ['Discover the right extracurriculars – sports, MUNs, arts, etc.', 'Get matched with achievers in your area of interest', 'Strategic support for competitions and international exposure'] },
@@ -108,10 +104,7 @@ function Help() {
     ];
 
     return (
-        // The root element is a Fragment to accommodate Helmet without adding a DOM element
         <>
-            {/* --- SEO Head Management --- */}
-            {/* Step 3: Add the Helmet component with the necessary tags */}
             <Helmet>
                 <title>{pageTitle}</title>
                 <meta name="description" content={pageDescription} />
@@ -119,12 +112,9 @@ function Help() {
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={pageDescription} />
                 <meta property="og:url" content={canonicalUrl} />
-                {/* Note: For social sharing, provide a full, absolute URL to a relevant image */}
-                {/* <meta property="og:image" content="https://uncertain.in/your-image-for-this-section.jpg" /> */}
                 <meta property="og:type" content="website" />
             </Helmet>
 
-            {/* --- Your Original UI (Unchanged) --- */}
             <div id='howwehelp'>
                 <div className='flex flex-col lg:flex-row border-b-2 border-b-black/10'>
                     <HelpCard {...section1.left} className="lg:w-1/3 border-b-2 lg:border-b-0 lg:border-r-2 border-black/10" />

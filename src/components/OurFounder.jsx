@@ -54,15 +54,12 @@ const founderDetails = [
 ]
 
 function OurFounder() {
-    // Define your SEO metadata
     const pageTitle = "Our Founders: Meet the Team Behind (un)certain";
     const pageDescription = "Learn about the founders of (un)certain: Dr. Malika Kukreja, Sagrika Kukreja, and Rhythm Kukreja. Discover the expertise in education, psychology, and global perspectives that drives our mentorship.";
-    const canonicalUrl = "https://uncertain.in/our-founders"; // Use your actual URL
+    const canonicalUrl = "https://uncertain.in/our-founders";
 
     return (
-        // Wrap with a Fragment to add Helmet without an extra div
         <>
-            {/* --- SEO Head Management --- */}
             <Helmet>
                 <title>{pageTitle}</title>
                 <meta name="description" content={pageDescription} />
@@ -70,12 +67,10 @@ function OurFounder() {
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={pageDescription} />
                 <meta property="og:url" content={canonicalUrl} />
-                {/* Use a prominent image for social sharing, like the first founder or a group photo */}
                 <meta property="og:image" content={founder1} />
                 <meta property="og:type" content="website" />
             </Helmet>
 
-            {/* --- Your Original UI (Unchanged) --- */}
             <div id='ourfounders'>
                 <div className="min-h-screen w-full bg-cover text-white" style={{ backgroundImage: `url(${bgImg})` }}>
                     <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Our Founders</h1>

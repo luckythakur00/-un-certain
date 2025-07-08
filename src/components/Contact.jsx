@@ -179,7 +179,6 @@ import Alert from './Alert';
 import { Helmet } from 'react-helmet';
 
 const Contact = () => {
-  // All your existing state and logic is preserved
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -254,29 +253,22 @@ const Contact = () => {
     }
   }
 
-  // Step 2: Define the SEO metadata for your contact page
   const pageTitle = "(un)certain Mentorship";
   const pageDescription = "Get in touch with the (un)certain team. Have questions, remarks, or need guidance? Write us a message or contact us directly via phone or email. We're here to help.";
   const canonicalUrl = "https://uncertain.in/contact"; // IMPORTANT: Use the final, live URL of this page
 
   return (
-    // Wrap everything in a React Fragment to add Helmet
     <>
-      {/* --- SEO Head Management --- */}
-      {/* Step 3: Add the Helmet component with your metadata */}
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        
-        {/* Open Graph tags for social media sharing */}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* --- Your Original UI (Unchanged) --- */}
       <div id='contact' className="bg-gray-50 min-h-[80vh] flex items-center justify-center p-4">
         <div className="w-full max-w-6xl mt-4 mx-auto">
           <div className="text-center mb-10">
