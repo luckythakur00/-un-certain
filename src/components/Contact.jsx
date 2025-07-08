@@ -120,8 +120,8 @@ const Contact = () => {
               </div>
               <div className="mt-12 pt-8 border-t border-red-500/50 flex space-x-4">
                 <a href="https://wa.me/919910125735" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FaWhatsapp /></a>
-                <a href="https://www.instagram.com/uncertain.in?igsh=cnQzNTV5azhvZWVy" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiInstagram /></a>
-                <a href="https://www.facebook.com/profile.php?id=61577753199080" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiFacebook /></a>
+                <a href="https://www.instagram.com/uncertain.in?igsh=cnQzNTV5azhvZWVy" target="_blank" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiInstagram /></a>
+                <a href="https://www.facebook.com/profile.php?id=61577753199080" target="_blank" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FiFacebook /></a>
                 <a href="https://www.linkedin.com/company/un-certain/?lipi=urn%3Ali%3Apage%3Acompanies_company_people_index%3Bdf3ced32-c118-4aa5-99ab-fe089a52c50d" target='_blank' rel="noopener noreferrer" className="w-10 h-10 bg-red-700 hover:bg-red-800 rounded-full flex items-center justify-center transition-colors"><FaLinkedin /></a>
               </div>
             </div>
