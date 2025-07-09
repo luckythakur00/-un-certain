@@ -147,9 +147,9 @@ function MeetUncertain() {
 
             <div className='h-full' >
                 {/* <div id='meetuncertain' className="w-full bg-cover bg-center pt-8 md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center" style={{ backgroundImage: `url(${ImageBG})` }}> */}
-                <div id='meetuncertain' className="w-full bg-cover bg-center pt-8 md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center" style={{ backgroundImage: `url(${ImageBG})` }}>
+                {/* <div id='meetuncertain' className="w-full bg-cover bg-center pt-8 md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center" style={{ backgroundImage: `url(${ImageBG})` }}>
                     <div className='lg:pl-20' >
-                        <h1 className='text-3xl md:text-5xl pb-1 text-white'>Origin</h1>
+                        <h1 className='text-3xl md:text-5xl pb-1 text-white'>Our Story</h1>
                     </div>
                     <div className='w-full lg:w-[65%] p-8 sm:p-12 md:p-14 lg:p-16  text-white text-base md:text-lg space-y-5'>
                         <h1>Three siblings. One small town. A lifetime of lessons.</h1>
@@ -163,9 +163,26 @@ function MeetUncertain() {
                         <h1>Through our journeys — in education, psychology, policy, and real-world experience — we’ve seen the same truth across every story:</h1>
                         <h1>Mentorship isn’t optional. It’s transformational.</h1>
                     </div>
+                </div> */}
+                <div className='h-20 w-full bg-[#8B0000]' ></div>
+                <div id='meetuncertain' className="w-full flex flex-col justify-center items-center pt-10">
+                    <h1 className='text-3xl md:text-5xl font-semibold text-black/90'>Our Story</h1>
+                    <div className='w-full p-6 sm:p-10 md:p-12 lg:p-14  text-base md:text-lg space-y-5'>
+                        <h1>Three siblings. One small town. A lifetime of lessons.</h1>
+                        <h1>We grew up in Chamba — a quiet, remote corner of Himachal Pradesh — where opportunity wasn’t easy to come by. Our parents, despite having limited formal education, understood its power. They made bold choices, sent us to boarding schools, and guided us through big decisions — often learning as we did.</h1>
+                        <h1>Malika went first — carving her path through sheer determination, academic excellence, and grit. She became the first doctorate in our family — but often wonders how different things might’ve been with the right guidance at the right time.</h1>
+                        <h1>Sagrika followed — and had the benefit of learning from Malika’s experience. Her path was more holistic — alongside academic growth, she explored sports, student leadership, global forums, and found her calling in psychology. She later earned her Master’s from King’s College, London.</h1>
+                        <h1>Then came Rhythm — the youngest, and the best supported. Not because he had it easy, but because he had something powerful: mentors. That made all the difference — helping him build a global portfolio of academic work, public and private internships, community service projects, and ultimately secure a full scholarship to NYU Abu Dhabi with experiences across New York, London, and Prague.</h1>
+                        <h2>And that’s when it clicked.</h2>
+                        <h1>Most students don’t fall behind because they lack talent — they fall behind because they don’t have the right support at the right time.</h1>
+                        <h1>And most parents? They care deeply, but often struggle to strike the right balance between stepping in and stepping back.</h1>
+                        <h1>Through our journeys — in education, psychology, policy, and real-world experience — we’ve seen the same truth across every story:</h1>
+                        <h1>Mentorship isn’t optional. It’s transformational.</h1>
+                    </div>
                 </div>
+                <div className='h-20 w-full bg-[#8B0000]'></div>
 
-                <div id='ourapproach' className="w-full bg-cover bg-center pt-8 md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center">
+                {/* <div id='ourapproach' className="w-full bg-cover bg-center pt-8 md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center">
                     <div className='lg:pl-20' >
                         <h1 className='bg-white text-3xl md:text-5xl pb-1'>Our Approach</h1>
                     </div>
@@ -177,6 +194,18 @@ function MeetUncertain() {
                         <h1>We keep parents involved too — through progress updates, 1:1 check-ins, and workshops — because real guidance only works when students and parents grow together. </h1>
                         <h1 className='text-black font-semibold' >One student. One mentor. Real conversations. Real progress.</h1>
                     </div>
+                </div> */}
+
+                <div id='ourapproach' className="w-full flex flex-col justify-center items-center pt-10">
+                    <h1 className='bg-white text-3xl md:text-5xl font-semibold text-black/90'>Our Approach</h1>
+                    <div className='w-full p-8 sm:p-12 md:p-14 lg:p-16 text-base md:text-lg space-y-6'>
+                        <h1>We are <span className='bg-black text-white p-0.5 italic' >not</span> another career counseling company.</h1>
+                        <h1><span className='text-[#DA2828] font-semibold' >(un)</span><span className='font-semibold'>certain</span> is a mentorship-first community for students aged 11–18. Our mentors don’t just tell students what to do — they help them actually do it. From building daily routines and staying consistent with schoolwork to exploring hobbies, working on real projects, and making better choices — we’re there at every step, not just the big milestones.</h1>
+                        <h1>Because let’s be honest: students today aren’t just choosing subjects or colleges. They’re navigating pressure, distractions, and endless noise about what success should look like. That’s where we come in. </h1>
+                        <h1>Every student is paired with a dedicated Buddy — a relatable mentor who understands their world, speaks their language, and helps them navigate academics, tough decisions, emotional stress, and everything in between. <br />We keep parents involved too — through progress updates, 1:1 check-ins, and workshops — because real guidance only works when students and parents grow together.</h1>
+                        <h1 className='text-black font-semibold' >One student. One mentor. Real conversations. Real progress.</h1>
+                    </div>
+                    <div className='h-20 w-full bg-[#8B0000]'></div>
                 </div>
 
                 <div className="min-h-screen w-full flex justify-center items-center bg-cover bg-center p-4 sm:p-8" style={{ backgroundImage: `url(${Image2})` }}>

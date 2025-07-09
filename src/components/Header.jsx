@@ -18,11 +18,13 @@ const Header = () => {
     const navLinks = [
         { title: 'Home', href: '#home' },
         // { title: 'Meet (un)certain', href: '#meetuncertain' },
-        { title: 'Origin', href: '#meetuncertain' },
+        // { title: 'Origin', href: '#meetuncertain' },
+        { title: 'Our Story', href: '#meetuncertain' },
         { title: 'Our Approach', href: '#ourapproach' },
         { title: 'How We Help?', href: '#howwehelp' },
         { title: 'Find Your Fit', href: '#findyourfit' },
-        { title: 'Our Founders', href: '#ourfounders' },
+        // { title: 'Our Founders', href: '#ourfounders' },
+        { title: 'Meet the team', href: '#ourfounders' },
         { title: 'Contact', href: '#contact' },
     ];
 

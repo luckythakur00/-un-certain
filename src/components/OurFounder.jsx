@@ -30,7 +30,8 @@ function OurFounder() {
 
             <div id='ourfounders'>
                 <div className="min-h-screen w-full bg-cover text-white" style={{ backgroundImage: `url(${bgImg})` }}>
-                    <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Our Founders</h1>
+                    {/* <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Our Founders</h1> */}
+                    <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Meet the team</h1>
                     <div className='w-full flex flex-wrap justify-center items-stretch gap-8 p-4'>
                         {
                             founderDetails.map((val, index) => (
