@@ -27,7 +27,9 @@ function Hero() {
       </Helmet>
 
       <div className='w-full'>
-        <div className='h-8 w-full bg-[#8B0000]'></div>
+        <div className='h-8 w-full bg-[#8B0000]'>
+          <h1 className='font-semibold text-sm text-white flex justify-start items-center pl-16 pt-1'>India’s first student mentorship community</h1>
+        </div>
         <div id='home' className='w-full flex flex-col lg:flex-row'>
           <div className='w-full lg:w-1/2 min-h-[40vh] lg:min-h-[85vh] p-8 sm:p-12 lg:p-16 flex flex-col justify-center space-y-8 lg:space-y-10 bg-white text-[#8B0000] order-2 lg:order-1'>
             <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold leading-tight'> What if every student had a mentor growing up?</h1>

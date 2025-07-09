@@ -17,7 +17,8 @@ const Header = () => {
 
     const navLinks = [
         { title: 'Home', href: '#home' },
-        { title: 'Meet (un)certain', href: '#meetuncertain' },
+        // { title: 'Meet (un)certain', href: '#meetuncertain' },
+        { title: 'Origin', href: '#meetuncertain' },
         { title: 'Our Approach', href: '#ourapproach' },
         { title: 'How We Help?', href: '#howwehelp' },
         { title: 'Find Your Fit', href: '#findyourfit' },
