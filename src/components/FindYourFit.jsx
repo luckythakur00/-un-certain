@@ -69,7 +69,6 @@ function FindYourFit() {
                     </div>
 
                     <h1 className="text-sm text-center pb-2 px-6 mt-10">* The pricing is exclusive of GST which is chargeable at 18%</h1>
-                    {/* <div className="h-24 bg-[#8B0000]" ></div> */}
                 </div>
             </div >
         </>

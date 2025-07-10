@@ -97,10 +97,6 @@ function Testimonial() {
                 <h1 className='text-2xl md:text-4xl text-center font-semibold'>Testimonials</h1>
             </div>
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
-                {/* <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Testimonials</h2>
-                </div> */}
-
                 <div className="mt-12 relative" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
                     <div className="overflow-hidden w-full rounded-2xl shadow-lg">
                         <div className="flex" style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none', willChange: 'transform' }}>
