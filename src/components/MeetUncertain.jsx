@@ -279,20 +279,25 @@ function MeetUncertain() {
                     </div>
                     <div className='h-20 w-full bg-[#8B0000]'></div>
                 </div> */}
-
-                <div id='meetuncertain' className="w-full bg-cover bg-center pt-8 md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center">
-                    <div className='lg:pl-16' >
-                        <h1 className='bg-white text-3xl md:text-5xl pb-1'>Meet <span className='text-[#DA2828]' >(un)</span>certain</h1>
+                <div className='min-h-[80vh]' >
+                    <div id='meetuncertain' className='h-16 md:h-24 w-full bg-[#8B0000]'></div>
+                    <div className="h-full w-full bg-cover bg-center md:pt-14 lg:pt-0 flex flex-col lg:flex-row justify-between items-center">
+                        <div className='h-20 w-full lg:w-[50%] flex justify-center items-center ' >
+                            <h1 className='bg-white text-3xl md:text-4xl lg:text-5xl font-semibold'>Meet <span className='text-[#DA2828]' >(un)</span>certain</h1>
+                        </div>
+                        <div className='min-h-[70vh] w-full lg:w-[50%] p-8 sm:p-12 md:p-14 lg:p-16 text-base md:text-lg space-y-8 bg-[#8B0000] text-white'>
+                            <h1>We are <span className='bg-black italic p-0.5'>not</span> another career counseling company.</h1>
+                            <h2>
+                                {/* <span className='text-[#DA2828] bg-white font-semibold p-1 pr-0' >(un)</span><span className='text-[#2A2E31] bg-white font-semibold p-1 pl-0'>certain</span> is a mentorship-first community for students aged 11–18. Every student is paired with a dedicated Buddy — a relatable mentor who helps from building daily routines and staying consistent with schoolwork to exploring hobbies, working on real projects, and making better choices. */}
+                                We are a mentorship-first community for students aged 11–18. Every student is paired with a dedicated Buddy — a relatable mentor who helps from building daily routines and staying consistent with schoolwork to exploring hobbies, working on real projects, and making better choices.
+                            </h2>
+                            <h2>We keep parents involved too — through progress updates, 1:1 check-ins, and workshops — because real guidance only works when students and parents grow together.</h2>
+                            <h2 className='text-white text-lg font-semibold'>One student. One mentor. Real conversations. Real progress.</h2>
+                        </div>
                     </div>
-                    <div className='w-full lg:w-[50%] p-8 sm:p-12 md:p-14 lg:p-16 text-base md:text-lg space-y-8 bg-[#8B0000] text-white'>
-                        <h1>We are not another career counseling company.</h1>
-                        <h2>
-                            <span className='text-[#DA2828] font-semibold p-1 pr-0' >(un)</span><span className=' font-semibold p-1 pl-0'>certain</span> is a mentorship-first community for students aged 11–18. Every student is paired with a dedicated Buddy — a relatable mentor who helps from building daily routines and staying consistent with schoolwork to exploring hobbies, working on real projects, and making better choices. 
-                        </h2>
-                        <h2>We keep parents involved too — through progress updates, 1:1 check-ins, and workshops — because real guidance only works when students and parents grow together.</h2>
-                        <h2 className='text-white text-lg font-semibold'>One student. One mentor. Real conversations. Real progress.</h2>
-                    </div>
+                    <div id='meetuncertain' className='h-16 md:h-24 w-full hidden lg:block bg-[#8B0000]'></div>
                 </div>
+
                 {/* <div className='h-20 w-full bg-[#8B0000]'></div> */}
 
                 <div className="min-h-screen w-full flex justify-center items-center bg-cover bg-center p-4 sm:p-8" style={{ backgroundImage: `url(${Image2})` }}>

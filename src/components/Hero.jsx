@@ -27,7 +27,7 @@ function Hero() {
       </Helmet>
 
       <div className='w-full'>
-        <div className='h-8 w-full bg-[#8B0000]'>
+        <div className='h-14 w-full flex justify-center items-center bg-[#8B0000]'>
           {/* <h1 className='font-semibold text-lg text-white flex justify-start items-center pl-16 pt-1'>India’s first student mentorship community</h1> */}
           <h1 className='font-semibold text-white text-center pt-1'>INDIA’S FIRST STUDENT MENTORSHIP COMMUNITY</h1>
         </div>
