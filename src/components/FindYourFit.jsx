@@ -19,8 +19,8 @@ function FindYourFit() {
             </Helmet>
 
             <div id="findyourfit">
-                <div className='h-32 md:h-40 bg-[#8B0000] flex justify-center items-center'>
-                    <h1 className='text-3xl md:text-4xl lg:text-5xl text-white'>Find your fit</h1>
+                <div className='h-16 md:h-24 bg-[#8B0000] flex justify-center items-center'>
+                    <h1 className='text-2xl md:text-4xl font-semibold text-white'>Find your fit</h1>
                 </div>
                 <div>
                     <div className="relative flex flex-col items-center pb-32">
@@ -69,7 +69,7 @@ function FindYourFit() {
                     </div>
 
                     <h1 className="text-sm text-center pb-2 px-6 mt-10">* The pricing is exclusive of GST which is chargeable at 18%</h1>
-                    <div className="h-24 bg-[#8B0000]" ></div>
+                    {/* <div className="h-24 bg-[#8B0000]" ></div> */}
                 </div>
             </div >
         </>

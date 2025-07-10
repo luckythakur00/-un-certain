@@ -16,7 +16,7 @@ function OurFounder() {
     const canonicalUrl = "https://uncertain.in";
 
     return (
-        <>
+        <div id='ourfounders'>
             <Helmet>
                 <title>{pageTitle}</title>
                 <meta name="description" content={pageDescription} />
@@ -27,11 +27,16 @@ function OurFounder() {
                 <meta property="og:image" content={founder1} />
                 <meta property="og:type" content="website" />
             </Helmet>
-
-            <div id='ourfounders'>
-                <div className="min-h-screen w-full bg-cover text-white" style={{ backgroundImage: `url(${bgImg})` }}>
+            {/* <div className='h-24 w-full bg-red-800' >
+                <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Meet the team</h1>
+            </div> */}
+            <div className="h-16 md:h-24 bg-[#8B0000] flex justify-center items-center text-white" >
+                <h1 className='text-2xl md:text-4xl text-center font-semibold'>Meet the team</h1>
+            </div>
+            <div>
+                <div className="min-h-screen w-full py-10 bg-cover text-white" style={{ backgroundImage: `url(${bgImg})` }}>
                     {/* <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Our Founders</h1> */}
-                    <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Meet the team</h1>
+                    {/* <h1 className='text-5xl text-center font-semibold py-10 text-black/80'>Meet the team</h1> */}
                     <div className='w-full flex flex-wrap justify-center items-stretch gap-8 p-4'>
                         {
                             founderDetails.map((val, index) => (
@@ -49,9 +54,9 @@ function OurFounder() {
                         }
                     </div>
                 </div>
-                <div className='h-24 bg-[#8B0000] pt-10' ></div>
+                {/* <div className='h-24 bg-[#8B0000] pt-10' ></div> */}
             </div>
-        </>
+        </div>
     )
 }
 

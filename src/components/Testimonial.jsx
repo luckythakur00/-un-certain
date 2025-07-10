@@ -92,11 +92,14 @@ function Testimonial() {
     }, [startAutoplay, stopAutoplay]);
 
     return (
-        <div id='testimonials' className="py-14 pb-32">
+        <div id='testimonials' className=" pb-32">
+            <div className="h-16 md:h-24 bg-[#8B0000] flex justify-center items-center text-white" >
+                <h1 className='text-2xl md:text-4xl text-center font-semibold'>Testimonials</h1>
+            </div>
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
-                <div className="max-w-3xl mx-auto text-center">
+                {/* <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Testimonials</h2>
-                </div>
+                </div> */}
 
                 <div className="mt-12 relative" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
                     <div className="overflow-hidden w-full rounded-2xl shadow-lg">
