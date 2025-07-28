@@ -27,11 +27,8 @@ const Header = () => {
     return (
         <>
             <Helmet>
-                <title>Uncertain.in – Official Site</title>
-                <meta
-                    name="description"
-                    content="Uncertain.in provides mentorship to help students understand their strengths and options."
-                />
+                <title>(un)certain – India’s First Student Mentorship Community (Ages 11–18)</title>
+                <meta name="description" content="(un)certain is a mentorship-first community that guides students aged 11–18 through academics, extracurriculars, and portfolio-building. Weekly 1:1 sessions, real exposure, and support that actually works."/>
             </Helmet>
 
             <header className={`w-full fixed top-0 left-0 z-50 transition-all bg-white duration-300 ${scrolled ? 'shadow-md py-2' : 'py-2 md:py-4'}`}>

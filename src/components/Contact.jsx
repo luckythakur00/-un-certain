@@ -79,8 +79,10 @@ const Contact = () => {
     }
   }
 
-  const pageTitle = "(un)certain Mentorship";
-  const pageDescription = "Get in touch with the (un)certain team. Have questions, remarks, or need guidance? Write us a message or contact us directly via phone or email. We're here to help.";
+  // const pageTitle = "(un)certain Mentorship";
+  // const pageDescription = "Get in touch with the (un)certain team. Have questions, remarks, or need guidance? Write us a message or contact us directly via phone or email. We're here to help.";
+  const pageTitle = "(un)certain – India’s First Student Mentorship Community (Ages 11–18)";
+  const pageDescription = "(un)certain is a mentorship-first community that guides students aged 11–18 through academics, extracurriculars, and portfolio-building. Weekly 1:1 sessions, real exposure, and support that actually works.";
   const canonicalUrl = "https://uncertain.in";
 
   return (

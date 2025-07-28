@@ -2,8 +2,10 @@ import { Helmet } from "react-helmet";
 
 function FindYourFit() {
 
-    const pageTitle = "Find Your Fit: Pricing & Plans | uncertain.in Mentorship";
-    const pageDescription = "Explore (un)certain's flexible mentorship plans. Choose our comprehensive Subscription Plan for long-term growth or the 'Pay As You Go' option for specific guidance. Find the perfect fit today.";
+    // const pageTitle = "Find Your Fit: Pricing & Plans | uncertain.in Mentorship";
+    // const pageDescription = "Explore (un)certain's flexible mentorship plans. Choose our comprehensive Subscription Plan for long-term growth or the 'Pay As You Go' option for specific guidance. Find the perfect fit today.";
+    const pageTitle = "(un)certain – India’s First Student Mentorship Community (Ages 11–18)";
+    const pageDescription = "(un)certain is a mentorship-first community that guides students aged 11–18 through academics, extracurriculars, and portfolio-building. Weekly 1:1 sessions, real exposure, and support that actually works.";
     const canonicalUrl = "https://uncertain.in";
 
     return (

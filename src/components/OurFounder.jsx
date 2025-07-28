@@ -11,8 +11,10 @@ const founderDetails = [
 ]
 
 function OurFounder() {
-    const pageTitle = "Our Founders: Meet the Team Behind (un)certain";
-    const pageDescription = "Learn about the founders of (un)certain: Dr. Malika Kukreja, Sagrika Kukreja, and Rhythm Kukreja. Discover the expertise in education, psychology, and global perspectives that drives our mentorship.";
+    // const pageTitle = "Our Founders: Meet the Team Behind (un)certain";
+    // const pageDescription = "Learn about the founders of (un)certain: Dr. Malika Kukreja, Sagrika Kukreja, and Rhythm Kukreja. Discover the expertise in education, psychology, and global perspectives that drives our mentorship.";
+    const pageTitle = "(un)certain – India’s First Student Mentorship Community (Ages 11–18)";
+    const pageDescription = "(un)certain is a mentorship-first community that guides students aged 11–18 through academics, extracurriculars, and portfolio-building. Weekly 1:1 sessions, real exposure, and support that actually works.";
     const canonicalUrl = "https://uncertain.in";
 
     return (

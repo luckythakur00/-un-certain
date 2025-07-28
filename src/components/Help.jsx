@@ -17,8 +17,10 @@ const HelpCard = ({ icon, title, items, className }) => (
 );
 
 function Help() {
-    const pageTitle = "How We Help | (un)certain Mentorship Program";
-    const pageDescription = "Mentorship for students aged 11–18. Helping them grow academically, emotionally, and personally — with real guidance, one conversation at a time.";
+    // const pageTitle = "How We Help | (un)certain Mentorship Program";
+    // const pageDescription = "Mentorship for students aged 11–18. Helping them grow academically, emotionally, and personally — with real guidance, one conversation at a time.";
+    const pageTitle = "(un)certain – India’s First Student Mentorship Community (Ages 11–18)";
+    const pageDescription = "(un)certain is a mentorship-first community that guides students aged 11–18 through academics, extracurriculars, and portfolio-building. Weekly 1:1 sessions, real exposure, and support that actually works.";
     const canonicalUrl = "https://uncertain.in";
 
     const section1 = {
