@@ -21,7 +21,6 @@ const Contact = () => {
   const handleCloseAlert = () => setAlert({ ...alert, show: false });
 
   const handleSubmit = async (e) => {
-    // This entire function remains exactly the same
     e.preventDefault();
     handleCloseAlert();
 
