@@ -44,7 +44,7 @@ function FindYourFit() {
                             <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-red-800"></div>
                             <a href="#contact" className='w-72 lg:w-80 mt-2 bg-[#8B0000] text-white hover:bg-[#730000] hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
                                 <span className="text-lg lg:text-2xl font-semibold">Subscription Plan</span>
-                                <span className="text-lg lg:text-xl font-bold mt-1">₹18,000*</span>
+                                <span className="text-lg lg:text-xl font-bold mt-1">₹24,000*</span>
                             </a>
                         </div>
                     </div>
@@ -57,6 +57,7 @@ function FindYourFit() {
                             <h2 className='mb-4'>Inclusions: </h2>
                             <ol className='list-decimal pl-4 text-black/80 space-y-2'>
                                 <li> <span className='text-[#8B0000] font-semibold'>Single 1:1 session</span> with a buddy</li>
+                                <li><span className='text-[#8B0000] font-semibold'>Aptitude Assessment</span> included</li>
                                 <li>Support for <span className='text-[#8B0000] font-semibold'>Recap notes + action plan</span> within 48 hours</li>
                                 <li>Suitable for drop-in academic decisions, peer pressure talk, or quick check-ins</li>
                             </ol>
@@ -65,7 +66,7 @@ function FindYourFit() {
                             <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-red-800"></div>
                             <a href="#contact" className='w-72 lg:w-80 mt-2 bg-[#8B0000] text-white hover:bg-[#730000] hover:scale-105 transition-all duration-300 cursor-pointer rounded-full px-12 py-4 flex flex-col items-center'>
                                 <span className="text-lg lg:text-2xl font-semibold">Pay as you go</span>
-                                <span className="text-lg lg:text-xl font-bold mt-1">₹2,500*</span>
+                                <span className="text-lg lg:text-xl font-bold mt-1">₹3,200*</span>
                             </a>
                         </div>
                     </div>
